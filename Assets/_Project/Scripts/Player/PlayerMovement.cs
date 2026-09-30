@@ -249,15 +249,5 @@ namespace WhisperingWilds.Player
                 verticalVelocity += gravity * Time.deltaTime;
             }
         }
-
-        private void OnDrawGizmosSelected()
-        {
-            Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
-            Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
-
-            Gizmos.color = isGrounded ? transparentGreen : transparentRed;
-            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - groundedOffset, transform.position.z);
-            Gizmos.DrawSphere(spherePosition, groundedRadius);
-        }
     }
 }
